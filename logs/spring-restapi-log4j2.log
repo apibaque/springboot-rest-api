@@ -1,0 +1,82 @@
+2019-03-13 09:39:45,238 INFO o.s.b.StartupInfoLogger [restartedMain] Starting Application on MacBook-Pro-AP.local with PID 23227 (/Users/apibaque/Documents/workspacePOC/springboot-rest-api/target/classes started by apibaque in /Users/apibaque/Documents/workspacePOC/springboot-rest-api)
+2019-03-13 09:39:45,273 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-03-13 09:39:45,308 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-13 09:39:45,308 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-13 09:39:45,855 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-13 09:39:45,856 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-13 09:39:45,889 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 30ms. Found 1 repository interfaces.
+2019-03-13 09:39:45,990 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-13 09:39:45,991 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-13 09:39:45,999 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-03-13 09:39:46,267 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff213794] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 09:39:46,552 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2019-03-13 09:39:46,561 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-0.0.0.0-8000"]
+2019-03-13 09:39:46,568 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-03-13 09:39:46,569 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-03-13 09:39:46,575 INFO o.a.j.l.DirectJDKLog [restartedMain] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/apibaque/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-03-13 09:39:46,636 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-03-13 09:39:46,636 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1328 ms
+2019-03-13 09:39:46,840 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-03-13 09:39:46,907 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-03-13 09:39:46,949 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-13 09:39:46,991 INFO o.h.Version [restartedMain] HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-13 09:39:46,992 INFO o.h.c.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-03-13 09:39:47,075 INFO o.h.a.c.r.j.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-13 09:39:47,161 INFO o.h.d.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-13 09:39:47,297 INFO o.h.t.s.i.SchemaCreatorImpl [restartedMain] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6dcb5d15'
+2019-03-13 09:39:47,300 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-13 09:39:47,335 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-03-13 09:39:47,478 INFO c.m.d.l.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[127.0.0.1:38000], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-03-13 09:39:47,479 INFO c.m.d.l.SLF4JLogger [restartedMain] Adding discovered server 127.0.0.1:38000 to client view of cluster
+2019-03-13 09:39:47,928 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-13 09:39:48,053 INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-13 09:39:48,179 INFO o.s.s.c.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 09:39:48,249 INFO c.m.d.l.SLF4JLogger [cluster-ClusterId{value='5c88fa137439435abb2ab32f', description='null'}-127.0.0.1:38000] Opened connection [connectionId{localValue:1, serverValue:167979}] to 127.0.0.1:38000
+2019-03-13 09:39:48,374 INFO s.d.s.w.p.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2019-03-13 09:39:48,389 INFO s.d.s.w.p.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2019-03-13 09:39:48,395 INFO c.m.d.l.SLF4JLogger [cluster-ClusterId{value='5c88fa137439435abb2ab32f', description='null'}-127.0.0.1:38000] Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:38000, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=145038033}
+2019-03-13 09:39:48,396 INFO c.m.d.l.SLF4JLogger [cluster-ClusterId{value='5c88fa137439435abb2ab32f', description='null'}-127.0.0.1:38000] Discovered cluster type of STANDALONE
+2019-03-13 09:39:48,453 INFO s.d.s.w.s.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2019-03-13 09:39:48,619 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-0.0.0.0-8000"]
+2019-03-13 09:39:48,634 INFO o.a.j.l.DirectJDKLog [restartedMain] Using a shared selector for servlet write/read
+2019-03-13 09:39:48,646 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-13 09:39:48,650 INFO o.s.b.StartupInfoLogger [restartedMain] Started Application in 3.698 seconds (JVM running for 4.509)
+2019-03-13 09:40:27,312 INFO o.a.j.l.DirectJDKLog [http-nio-0.0.0.0-8000-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 09:40:27,312 INFO o.s.w.s.FrameworkServlet [http-nio-0.0.0.0-8000-exec-2] Initializing Servlet 'dispatcherServlet'
+2019-03-13 09:40:27,318 INFO o.s.w.s.FrameworkServlet [http-nio-0.0.0.0-8000-exec-2] Completed initialization in 6 ms
+2019-03-13 09:40:27,395 INFO c.r.p.a.c.PaymentController [http-nio-0.0.0.0-8000-exec-2] Request body (GET payment) from API idOrder: 3F2504E0-4F89-11D3-9A0C-0305E82C3306
+2019-03-13 09:40:43,495 INFO c.m.d.l.SLF4JLogger [http-nio-0.0.0.0-8000-exec-2] Opened connection [connectionId{localValue:2, serverValue:167988}] to 127.0.0.1:38000
+2019-03-13 09:40:43,658 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-0.0.0.0-8000-exec-2] Resolved [org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "Payment Not Found"; nested exception is java.lang.NullPointerException]
+2019-03-13 09:41:01,113 INFO c.r.p.a.c.PaymentController [http-nio-0.0.0.0-8000-exec-3] Request body (GET payment) from API idOrder: 3F2504E0-4F89-11D3-9A0C-0305E82C3301
+2019-03-13 09:41:01,286 INFO c.r.p.a.c.PaymentController [http-nio-0.0.0.0-8000-exec-3] Response body (GET payment) from API idOrder: 3F2504E0-4F89-11D3-9A0C-0305E82C3301 data: class Payment {
+    id: 3F2504E0-4F89-11D3-9A0C-0305E82C3301
+    transactionId: null
+    createdDate: Mon Mar 11 12:33:59 CLT 2019
+    modifyDate: null
+    debtorAccount: class DebtorAccount {
+        identification: 03700
+        name: SANTANDER
+        destinationDNI: 8000000
+    }
+    creditorAccount: class CreditorAccount {
+        identification: 00100
+        name: SANTANDER - SOPROLE
+        destinationDNI: 76000000
+    }
+    instructedAmount: class InstructedAmount {
+        amount: 500000
+        currency: 152
+    }
+    status: APPROVED
+}
+2019-03-13 09:42:08,383 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(15)-127.0.0.1] Application shutdown requested.
+2019-03-13 09:42:08,388 INFO o.s.s.c.ExecutorConfigurationSupport [RMI TCP Connection(15)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-13 09:42:08,390 INFO c.m.d.l.SLF4JLogger [RMI TCP Connection(15)-127.0.0.1] Closed connection [connectionId{localValue:2, serverValue:167988}] to 127.0.0.1:38000 because the pool has been closed.
+2019-03-13 09:42:08,392 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(15)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-13 09:42:08,392 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [RMI TCP Connection(15)-127.0.0.1] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-03-13 09:42:08,396 INFO o.s.b.f.s.DisposableBeanAdapter [RMI TCP Connection(15)-127.0.0.1] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+2019-03-13 09:42:08,397 INFO c.z.h.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-03-13 09:42:08,398 INFO c.z.h.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown completed.
