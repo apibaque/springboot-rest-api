@@ -7,11 +7,14 @@ import java.util.Random;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import cl.redbanc.payment.api.controllers.PaymentController;
 import cl.redbanc.payment.api.model.PaymentDTO;
 import cl.redbanc.payment.model.CreditorAccount;
 import cl.redbanc.payment.model.DebtorAccount;
@@ -25,6 +28,7 @@ public class PaymentServiceImpl implements PaymentService {
 	@Autowired
 	private PaymentRepository paymentRepository;
 	
+	private final static Logger logger = LoggerFactory.getLogger(PaymentServiceImpl.class);
 
 	private Payment findOne(String id) {
 		Optional<Payment> entity = paymentRepository.findById(id);
@@ -40,6 +44,7 @@ public class PaymentServiceImpl implements PaymentService {
 			 Payment entity = findOne(id);				
 			 return new PaymentDTO().build(entity);
 		 }catch(Exception e) {
+			logger.error("Response body (GET payment) from API idOrder: " + id +  " Payment Not Found ");
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Payment Not Found", e);
 		 }
 		
@@ -47,11 +52,11 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public PaymentDTO addPayment(PaymentDTO payment) {
-		CreditorAccount creditorAccount = new CreditorAccount(payment.getCreditorAccount().getIdentification(), payment.getCreditorAccount().getName(), payment.getCreditorAccount().getDestinationDNI());
-		DebtorAccount debtorAccount = new DebtorAccount(payment.getDebtorAccount().getIdentification(), payment.getDebtorAccount().getName(), payment.getDebtorAccount().getDestinationDNI());
+		CreditorAccount creditorAccount = new CreditorAccount(payment.getCreditorAccount().getIdentification(), payment.getCreditorAccount().getName(), payment.getCreditorAccount().getDestinationDNI(), payment.getCreditorAccount().getSecondaryIdentificator());
+		DebtorAccount debtorAccount = new DebtorAccount(payment.getDebtorAccount().getIdentification(), payment.getDebtorAccount().getName(), payment.getDebtorAccount().getDestinationDNI(), payment.getDebtorAccount().getSecondaryIdentificator());
 		InstructedAmount instructedAmount = new InstructedAmount(payment.getInstructedAmount().getAmount(), payment.getInstructedAmount().getCurrency());
 		Payment entity = new Payment(payment.getId().toString(),payment.getStatus().toString(), 
-				new Date(), payment.getModificationDate(),
+				new Date(), new Date(),
 				debtorAccount, creditorAccount,instructedAmount);
 
 		paymentRepository.save(entity);
@@ -65,7 +70,8 @@ public class PaymentServiceImpl implements PaymentService {
 		Payment entity = this.findOne(payment.getId());
 		entity.setStatus(payment.getStatus().toString());
 		entity.setModificationDate(new Date());
-		entity.setTransactionId(generateRandom().toString());
+		entity.setTransactionId(payment.getTransactionId());
+		//entity.setTransactionId(generateRandom().toString());
 		
 		paymentRepository.save(entity);
 		
